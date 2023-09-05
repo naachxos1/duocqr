@@ -80,4 +80,10 @@ export class DataService {
   public getMessageById(id: number): Message {
     return this.messages[id];
   }
+
+  public deleteMessageById(id: number) {
+    this.messages = this.messages.filter(aux => {
+      return aux.id !== id
+    })    
+  }
 }

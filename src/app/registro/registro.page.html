@@ -1,0 +1,84 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-button slot="start" [routerLink]="['/login']"  >
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-title>registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">registro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <br>
+  <br>
+  <ion-title color="primary">Registrate Aqui:</ion-title>
+
+  <ion-card-header>
+    <form [formGroup]="formularioRegistro" >
+      <ion-input
+      formControlName="nombre"
+      type="text"
+      fill="solid"
+      label="Ingresa nombre"
+      labelPlacement="floating"
+      helperText="Ingrese su Nombre"
+      ngModel
+      text
+    ></ion-input>
+      <br>
+      <ion-input
+      formControlName="rut"
+      type="text"
+      fill="solid"
+      label="Ingresa Rut"
+      labelPlacement="floating"
+      helperText="Ingrese su Rut"
+      ngModel
+      text
+    ></ion-input>
+      <br>
+      <ion-input
+      formControlName="correo"
+      type="email"
+      fill="solid"
+      label="Ingresa Correo"
+      labelPlacement="floating"
+      helperText="Ingrese un email: @profesor.duoc.cl o @duocuc.cl"
+      ngModel
+      email
+    ></ion-input>
+    <br>
+    <ion-input
+    formControlName="password"
+    type="password"
+    fill="solid"
+    label="Ingresa Contraseña"
+    labelPlacement="floating"
+    helperText="Ingrese aqui Contraseña"
+    ngModel
+    password
+    ></ion-input>
+    <br>
+    <ion-input
+    formControlName="confirmarPassword"
+    type="password"
+    fill="solid"
+    label="Ingresa Contraseña"
+    labelPlacement="floating"
+    helperText="Repita Contraseña"
+    ngModel
+    password
+    ></ion-input>
+    <br>
+    <ion-button expand="block" (click)="registrar()" >Registrar</ion-button>
+
+    </form>
+    </ion-card-header>
+
+</ion-content>
